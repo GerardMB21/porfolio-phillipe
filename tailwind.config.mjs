@@ -5,14 +5,17 @@ export default {
 		extend: {
 			colors: {
 				primary: "#38b6ff",
-				secondary: "#222"
+				secondary: "#212223"
 			},
 			borderWidth: {
 				3: '3px'
 			},
 			width: {
 				68: '17rem'
-			}
+			},
+			boxShadow: {
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      }
 		},
 	},
 	plugins: [],

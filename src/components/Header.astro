@@ -1,9 +1,9 @@
 <header class="sticky top-0 w-full flex items-center justify-between py-10 px-16 bg-transparent">
   <div class="py-2 px-10 bg-primary">
-    <a href="#phillipe-matos" class="uppercase text-base font-bold text-black">phillipe matos</a>
+    <a id="init"href="#phillipe-matos" class="uppercase text-base font-bold text-black">phillipe matos</a>
   </div>
   <nav>
-    <ul class="flex items-center justify-between gap-x-14 [&>li>a]:uppercase [&>li>a]:text-sm [&>li>a]:font-medium [&>li>a]:">
+    <ul id="anchors" class="flex items-center justify-between gap-x-14 [&>li>a]:uppercase [&>li>a]:text-sm [&>li>a]:font-medium [&>li>a]:transition-all [&>li>a]:duration-300">
       <li>
         <a href="#about-me">sobre mí</a>
       </li>
@@ -26,3 +26,47 @@
     <div class="absolute top-1/2 -right-3 -translate-y-1/2 size-3 rounded-full border-3 bg-transparent border-white"></div>
   </div>
 </header>
+
+<style>
+  a.active {
+    color: #38b6ff;
+  }
+</style>
+
+<script>
+  const anchors = document.getElementById('anchors') as HTMLUListElement;
+  const init = document.getElementById('init') as HTMLAnchorElement;
+
+  if (anchors && init) {
+    const sect = window.location.hash;
+
+    for (let i = 0; i < anchors.children.length; i++) {
+      const element = anchors.children[i] as HTMLLIElement;
+      const anchor = [...element.children][0] as HTMLAnchorElement;
+
+      element.addEventListener('click', () => {
+        for (let e = 0; e < anchors.children.length; e++) {
+          const el = anchors.children[e];
+          const anc = [...el.children][0] as HTMLAnchorElement;
+          anc.classList.remove('active');
+        };
+
+        anchor.classList.add('active');
+      });
+
+      if (sect === anchor.hash) {
+        anchor.classList.add('active');
+      } else {
+        anchor.classList.remove('active');
+      };
+    };
+
+    init.addEventListener('click', () => {
+      for (let e = 0; e < anchors.children.length; e++) {
+        const el = anchors.children[e];
+        const anc = [...el.children][0] as HTMLAnchorElement;
+        anc.classList.remove('active');
+      };
+    });
+  }
+</script>

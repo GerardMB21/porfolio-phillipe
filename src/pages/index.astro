@@ -3,6 +3,13 @@ import Pill from '../components/Pill.astro';
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Skills from '../components/Skills.astro';
+import ChevronRight from '../icons/chevronRight.astro';
+import ChevronLeft from '../icons/chevronLeft.astro';
+import EducationTime from '../icons/education_time.astro';
+import ExperienceTime from '../icons/experience_time.astro';
+import Phone from '../icons/phone.astro';
+import Mail from '../icons/mail.astro';
+import Ubication from '../icons/ubication.astro';
 ---
 
 <Layout title="Porfolio Phillipe Matos">
@@ -97,7 +104,7 @@ import Skills from '../components/Skills.astro';
       <p class="w-2/3 text-lg font-light">Actualmente curso el 5to ciclo de la carrera de Comunicación Audiovisual y Cine</p>
     </div>
     <div class="h-[calc(100dvh-184px)] flex flex-col items-center justify-between">
-      <span class="text-stroke text-8xl font-black text-transparent">2009 - 2024</span>
+      <EducationTime />
       <div class="w-3/4 mx-auto flex flex-col items-start justify-start gap-4">
         <div class="flex flex-col items-start justify-start gap-2">
           <h4 class="uppercase text-2xl font-black ">i.e.p jesús amigo</h4>
@@ -122,7 +129,7 @@ import Skills from '../components/Skills.astro';
           <hr class="h-3 w-full bg-primary border-0">
         </div>
         <div>
-          <span class="text-stroke text-8xl font-black text-transparent">2022 - 2024</span>
+          <ExperienceTime width="600" height="150" />
         </div>
       </div>
       <div class="w-full h-full pt-10 px-14 grid grid-cols-2 gap-x-60 items-start">
@@ -139,9 +146,224 @@ import Skills from '../components/Skills.astro';
     </div>
   </SectionContainer>
   <SectionContainer>
-    <div class="h-[calc(100dvh-184px)]">
+    <div class="h-[calc(100dvh-184px)] flex flex-col items-start justify-between">
+      <div class="w-full flex items-center justify-between">
+        <div class="flex flex-col items-start justify-between">
+          <h3 class="uppercase text-5xl font-black mb-6 ">mis proyectos</h3>
+          <hr class="h-3 w-full bg-primary border-0">
+        </div>
+        <div>
+          <ExperienceTime width="600" height="150" />
+        </div>
+      </div>
+      <div class="relative w-full h-full">
+        <button id="prev" class="absolute size-12 flex items-center justify-center rounded-full top-1/2 -translate-y-1/2 -translate-x-8 md:-translate-x-10 left-5 cursor-pointer z-[5] bg-white">
+          <ChevronLeft width={30} height={30} fill='#000'/>
+        </button>
+        <ul id="slider" class="relative scroll-smooth w-full h-full overflow-y-hidden overflow-x-scroll snap-x snap-mandatory flex gap-x-10">
+          <li class="slider-item shrink-0 snap-center relative w-full top-0 left-0 md:w-1/3">
+            <div class="w-full h-full flex flex-col items-center justify-center gap-y-6">
+              <lite-youtube
+                class="w-full h-auto"
+                videotitle="Cortometraje La calidez de un recuerdo | Abinia Producciones"
+                videoid="lXtEjg7zyA0"
+              ></lite-youtube>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xl text-center font-bold">Guionista</span>
+                <span class="text-xl text-center font-bold">-</span>
+                <span class="text-xl text-center font-bold">Camarógrafo</span>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item shrink-0 snap-center relative w-full top-0 left-0 md:w-1/3">
+            <div class="w-full h-full flex flex-col items-center justify-center gap-y-6">
+              <lite-youtube
+                class="w-full h-auto"
+                videotitle="Remake Coraline | Abinia Producciones"
+                videoid="Y_dWHUqiPJY"
+              ></lite-youtube>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xl text-center font-bold">Director de Fotografía</span>
+                <span class="text-xl text-center font-bold">-</span>
+                <span class="text-xl text-center font-bold">Camarógrafo</span>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item shrink-0 snap-center relative w-full top-0 left-0 md:w-1/3">
+            <div class="w-full h-full flex flex-col items-center justify-center gap-y-6">
+              <lite-youtube
+                class="w-full h-auto"
+                videotitle="Teaser La calidez de un recuerdo | Abinia Producciones"
+                videoid="MJ7SNhQK05c"
+              ></lite-youtube>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xl text-center font-bold">Camarógrafo</span>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item shrink-0 snap-center relative w-full top-0 left-0 md:w-1/3">
+            <div class="w-full h-full flex flex-col items-center justify-center gap-y-6">
+              <lite-youtube
+                class="w-full h-auto"
+                videotitle="Informe especial - Recorrido de las 7 iglesias"
+                videoid="1QZi4HPR7NA"
+              ></lite-youtube>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xl text-center font-bold">Guionista</span>
+                <span class="text-xl text-center font-bold">-</span>
+                <span class="text-xl text-center font-bold">Camarógrafo</span>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item shrink-0 snap-center relative w-full top-0 left-0 md:w-1/3">
+            <div class="w-full h-full flex flex-col items-center justify-center gap-y-6">
+              <lite-youtube
+                class="w-full h-auto"
+                videotitle="TRAILER OFICIAL - Te esperaré"
+                videoid="83HZ4UGQdzk"
+              ></lite-youtube>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xl text-center font-bold">Director</span>
+                <span class="text-xl text-center font-bold">-</span>
+                <span class="text-xl text-center font-bold">Camarógrafo</span>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item shrink-0 snap-center relative w-full top-0 left-0 md:w-1/3">
+            <div class="w-full h-full flex flex-col items-center justify-center gap-y-6">
+              <lite-youtube
+                class="w-full h-auto"
+                videotitle="Conoce nuestro podcast: Encerrados en Creho | Arcoíris productions"
+                videoid="YtRYM9_7Z4A"
+              ></lite-youtube>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xl text-center font-bold">Actor de Voz</span>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item shrink-0 snap-center relative w-full top-0 left-0 md:w-1/3">
+            <div class="w-full h-full flex flex-col items-center justify-center gap-y-6">
+              <a class="w-full h-auto" href="https://open.spotify.com/show/4j8yt5zeT2Z8lvamnRAnfq?si=6g2njF8rRHC84Y0ZItuHmg&utm_source=whatsapp&nd=1" aria-label="podcast encerrados en creho">
+                <img src="https://firebasestorage.googleapis.com/v0/b/phillipe-matos.appspot.com/o/podcast-img-500x281.webp?alt=media&token=6dd6b5ab-758b-4b33-98ce-9c7dc6537c00" alt="podcast encerrados en creho" width="500" height="281">
+              </a>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xl text-center font-bold">Actor</span>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item shrink-0 snap-center relative w-full top-0 left-0 md:w-1/3">
+            <div class="w-full h-full flex flex-col items-center justify-center gap-y-6">
+              <lite-youtube
+                class="w-full h-auto"
+                videotitle="UNA MENTIRA POR AMOR"
+                videoid="4c4R1ubSe7w"
+              ></lite-youtube>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xl text-center font-bold">Guionista</span>
+                <span class="text-xl text-center font-bold">-</span>
+                <span class="text-xl text-center font-bold">Actor</span>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item shrink-0 snap-center relative w-full top-0 left-0 md:w-1/3">
+            <div class="w-full h-full flex flex-col items-center justify-center gap-y-6">
+              <lite-youtube
+                class="w-full h-auto"
+                videotitle='Corto Documental "Red Flags a la Vista: Peligros Ocultos"'
+                videoid="FaNf-p9f-PQ"
+              ></lite-youtube>
+              <div class="flex items-center justify-center gap-3">
+                <span class="text-xl text-center font-bold">Productor</span>
+                <span class="text-xl text-center font-bold">-</span>
+                <span class="text-xl text-center font-bold">Camarógrafo</span>
+                <span class="text-xl text-center font-bold">-</span>
+                <span class="text-xl text-center font-bold">Actor</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button id="next" class="absolute size-12 flex items-center justify-center rounded-full top-1/2 -translate-y-1/2 translate-x-8 md:translate-x-10 right-5 cursor-pointer z-[5] bg-white">
+          <ChevronRight width={30} height={30} fill='#000'/>
+        </button>
+      </div>
     </div>
-    <div class="h-[calc(100dvh-184px)]">
+  </SectionContainer>
+  <SectionContainer className="mb-0 pb-72">
+    <div class="w-full h-full flex flex-col items-center justify-between">
+      <div class="mx-auto flex flex-col items-center justify-center gap-y-1">
+        <h6 class="uppercase text-4xl text-center font-black">contáctame</h6>
+        <span class="space-mono text-center italic text-sm font-semibold text-primary">¡Trabajemos juntos!</span>
+      </div>
+      <div class="mx-auto flex items-center justify-between gap-x-20">
+        <div class="flex flex-col items-center justify-end gap-y-4">
+          <div class="h-24 flex flex-col items-center justify-start gap-y-1">
+            <Phone width="64" height="64" />
+            <span class="text-base font-semibold">Teléfono</span>
+          </div>
+          <a class="text-base font-light" href="tel:+51970183317">970 183 317</a>
+        </div>
+        <div class="flex flex-col items-center justify-start gap-y-4">
+          <div class="h-24 flex flex-col items-center justify-end gap-y-1">
+            <Mail width="64" height="64" />
+            <span class="text-base font-semibold">Email</span>
+          </div>
+          <div class="flex flex-col items-center justify-start gap-y-1">
+            <a class="text-base font-light" href="mailto:1613matos@gmail.com">1613matos@gmail.com</a>
+            <a class="text-base font-light" href="mailto:phillipematos1@gmail.com">phillipematos1@gmail.com</a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-start gap-y-4">
+          <div class="h-24 flex flex-col items-center justify-end gap-y-1">
+            <Ubication width="64" height="64" />
+            <span class="text-base font-semibold">Address</span>
+          </div>
+          <div class="flex flex-col items-center justify-start gap-y-1">
+            <span>Mz V1 Lt 3J psj. Las Dunas</span>
+            <span>Zapallal - Puente Piedra</span>
+          </div>
+        </div>
+      </div>
     </div>
   </SectionContainer>
 </Layout>
+
+<style>
+  #slider {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: scroll;
+  }
+
+  #slider::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<script>
+  import '@justinribeiro/lite-youtube';
+
+  const slider = document.getElementById('slider') as HTMLElement;
+  const prev = document.getElementById('prev') as HTMLDivElement;
+  const next = document.getElementById('next') as HTMLDivElement;
+
+  if (slider && prev && next) {
+		let slides = Array.from(slider.children) as any;
+		let actualIndex = 0;
+
+    prev.addEventListener('click', () => {
+      let slides = Array.from(slider.children) as any;
+
+			actualIndex = (actualIndex - 1 + slides.length) % slides.length;
+
+			slider.scrollLeft = slides[actualIndex].offsetLeft;
+    });
+
+    next.addEventListener('click', () => {
+      let slides = Array.from(slider.children) as any;
+
+			actualIndex = (actualIndex + 1) % slides.length;
+
+			slider.scrollLeft = slides[actualIndex].offsetLeft;
+    });
+  };
+</script>

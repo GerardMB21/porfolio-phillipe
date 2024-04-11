@@ -5,7 +5,8 @@ export default {
 		extend: {
 			colors: {
 				primary: "#38b6ff",
-				secondary: "#212223"
+				secondary: "#212223",
+				tertiary: "#1b71b8"
 			},
 			borderWidth: {
 				3: '3px'

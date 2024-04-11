@@ -2,10 +2,10 @@
 import PhillipeMatos from "../icons/phillipe_matos.astro";
 ---
 
-<footer class="fixed bottom-0 w-full py-10 px-16 bg-transparent">
+<footer class="fixed bottom-0 w-full py-10 px-16 bg-transparent z-[1]">
   <div class="relative">
     <div class="dot-view absolute top-1/2 -left-3 -translate-y-1/2 size-3 rounded-full border-3 bg-transparent border-white"></div>
-    <hr class="line w-1/12 h-1 bg-white">
+    <hr class="line w-9/12 h-1 bg-white">
     <div class="dot absolute top-1/2 -right-3 -translate-y-1/2 size-3 rounded-full border-3 bg-transparent border-transparent"></div>
   </div>
   <div class="name relative w-full h-0 flex items-center justify-center overflow-hidden">
@@ -80,17 +80,18 @@ import PhillipeMatos from "../icons/phillipe_matos.astro";
 
   @keyframes full {
     0% {
-      width: 91.666667%;
+      /* width: 91.666667%; */
+      width: 75%;
       margin: 0;
     }
-    30% {
+    /* 30% {
       width: 91.666667%;
       margin: 0;
     }
     32% {
       width: 83.333333%;
       margin: 0;
-    }
+    } */
     34% {
       width: 75%;
       margin: 0;

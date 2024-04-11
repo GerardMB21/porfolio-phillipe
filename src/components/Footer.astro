@@ -1,0 +1,347 @@
+---
+import PhillipeMatos from "../icons/phillipe_matos.astro";
+---
+
+<footer class="fixed bottom-0 w-full py-10 px-16 bg-transparent">
+  <div class="relative">
+    <div class="dot-view absolute top-1/2 -left-3 -translate-y-1/2 size-3 rounded-full border-3 bg-transparent border-white"></div>
+    <hr class="line w-1/12 h-1 bg-white">
+    <div class="dot absolute top-1/2 -right-3 -translate-y-1/2 size-3 rounded-full border-3 bg-transparent border-transparent"></div>
+  </div>
+  <div class="name relative w-full h-0 flex items-center justify-center overflow-hidden">
+    <PhillipeMatos class="w-3/5 h-auto mx-auto" />
+  </div>
+  <div class="flex items-center justify-between gap-16">
+    <div class="relative flex-grow basis-0">
+      <div class="dot absolute top-1/2 -left-3 -translate-y-1/2 size-3 rounded-full border-3 bg-transparent border-transparent"></div>
+      <hr class="line-left w-0 h-1 bg-white">
+    </div>
+    <span class="time text-2xl uppercase h-0 overflow-hidden">portafolio 2024</span>
+    <div class="relative flex-grow basis-0">
+      <hr class="line-right w-0 h-1 bg-white">
+      <div class="dot absolute top-1/2 -right-3 -translate-y-1/2 size-3 rounded-full border-3 bg-transparent border-transparent"></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .text-shadow {
+    -webkit-text-stroke: 2px #fff;
+  }
+
+  .line {
+    animation: full linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
+    animation-delay: 3s;
+  }
+
+  .dot {
+    animation: view linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
+    animation-delay: 3s;
+  }
+
+  .dot-view {
+    animation: dotview linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
+    animation-delay: 3s;
+  }
+
+  .name {
+    animation: apper linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
+    animation-delay: 3s;
+  }
+
+  .time {
+    animation: timeline linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
+    animation-delay: 3s;
+  }
+
+  .line-left {
+    animation: left linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
+    animation-delay: 3s;
+  }
+
+  .line-right {
+    animation: right linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
+    animation-delay: 3s;
+  }
+
+  @keyframes full {
+    0% {
+      width: 91.666667%;
+      margin: 0;
+    }
+    30% {
+      width: 91.666667%;
+      margin: 0;
+    }
+    32% {
+      width: 83.333333%;
+      margin: 0;
+    }
+    34% {
+      width: 75%;
+      margin: 0;
+    }
+    36% {
+      width: 66.666667%;
+      margin: 0;
+    }
+    38% {
+      width: 58.333333%;
+      margin: 0;
+    }
+    40% {
+      width: 50%;
+      margin: 0;
+    }
+    42% {
+      width: 41.666667%;
+      margin: 0;
+    }
+    44% {
+      width: 33.333333%;
+      margin: 0;
+    }
+    46% {
+      width: 25%;
+      margin: 0;
+    }
+    48% {
+      width: 16.666667%;
+      margin: 0;
+    }
+    50% {
+      width: 8.333333%;
+      margin: 0;
+    }
+    52% {
+      width: 5%;
+      margin: 0;
+    }
+    54% {
+      width: 2.5%;
+      margin: 0;
+    }
+    56% {
+      width: 1%;
+      margin: 0;
+    }
+    66% {
+      width: 0%;
+      margin: 0 auto;
+    }
+    76% {
+      width: 8.333333%;
+      margin: 0 auto;
+    }
+    78% {
+      width: 16.666667%;
+      margin: 0 auto;
+    }
+    80% {
+      width: 25%;
+      margin: 0 auto;
+    }
+    82% {
+      width: 33.333333%;
+      margin: 0 auto;
+    }
+    84% {
+      width: 41.666667%;
+      margin: 0 auto;
+    }
+    86% {
+      width: 50%;
+      margin: 0 auto;
+    }
+    88% {
+      width: 58.333333%;
+      margin: 0 auto;
+    }
+    90% {
+      width: 66.666667%;
+      margin: 0 auto;
+    }
+    92% {
+      width: 75%;
+      margin: 0 auto;
+    }
+    94% {
+      width: 83.333333%;
+      margin: 0 auto;
+    }
+    96% {
+      width: 100%;
+      margin: 0 auto;
+    }
+    98% {
+      width: 100%;
+      margin: 0 auto;
+    }
+    100% {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  @keyframes left {
+    0% {
+      width: 0%;
+    }
+    78% {
+      width: 0%;
+    }
+    80% {
+      width: 8.333333%;
+    }
+    82% {
+      width: 16.666667%;
+    }
+    84% {
+      width: 25%;
+    }
+    86% {
+      width: 33.333333%;
+    }
+    88% {
+      width: 41.666667%;
+    }
+    90% {
+      width: 50%;
+    }
+    92% {
+      width: 58.333333%;
+    }
+    94% {
+      width: 66.666667%;
+    }
+    96% {
+      width: 75%;
+    }
+    98% {
+      width: 83.333333%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes right {
+    0% {
+      width: 0%;
+      margin-left: 100%;
+    }
+    78% {
+      width: 0%;
+      margin-left: 100%;
+    }
+    80% {
+      width: 8.333333%;
+      margin-left: 91.666667%;
+    }
+    82% {
+      width: 16.666667%;
+      margin-left: 83.333333%;
+    }
+    84% {
+      width: 25%;
+      margin-left: 75%;
+    }
+    86% {
+      width: 33.333333%;
+      margin-left: 66.666667%;
+    }
+    88% {
+      width: 41.666667%;
+      margin-left: 58.333333%;
+    }
+    90% {
+      width: 50%;
+      margin-left: 50%;
+    }
+    92% {
+      width: 58.333333%;
+      margin-left: 41.666667;
+    }
+    94% {
+      width: 66.666667%;
+      margin-left: 33.333333;
+    }
+    96% {
+      width: 75%;
+      margin-left: 25%;
+    }
+    98% {
+      width: 83.333333%;
+      margin-left: 16.666667;
+    }
+    100% {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  @keyframes view {
+    99% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: #fff;
+    }
+  }
+
+  @keyframes dotview {
+    60% {
+      border-color: transparent;
+    }
+    99% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: #fff;
+    }
+  }
+
+  @keyframes apper {
+    88% {
+      height: 0px;
+    }
+    100% {
+      height: 175.94px;
+    }
+  }
+
+  @keyframes timeline {
+    88% {
+      height: 0;
+    }
+    100% {
+      height: auto;
+    }
+  }
+</style>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const currentPosition = window.scrollY;
+    const visibleHeight = window.innerHeight;
+    const totalHeight = document.body.scrollHeight;
+
+    if ((currentPosition + visibleHeight) >= totalHeight) {
+      console.log('end to road')
+    }
+  });
+</script>

@@ -28,7 +28,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<title>{title}</title>
 	</head>
-	<body class="w-full min-h-dvh overflow-x-hidden bg-secondary">
+	<body class="w-full min-h-dvh overflow-x-hidden snap-y snap-mandatory bg-secondary">
 		<Header />
 		<div class="fixed rounded-full size-20 blur-2xl top-1/4 -translate-y-1/2 left-1/4 -translate-x-1/2 shadow-2xl z-[-1] bg-white shadow-white"></div>
 		<main>
@@ -79,4 +79,9 @@ const { title } = Astro.props;
 			scroll-behavior: auto;
 		}
 	}
+
+	/* * {
+		outline: 3px solid limegreen !important;
+		background: rgb(0 100 0/ 0.1) !important;
+	} */
 </style>

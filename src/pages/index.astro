@@ -22,7 +22,7 @@ import Ubication from '../icons/ubication.astro';
       </div>
       <p class="text-lg font-light">Desde temprana edad, el arte y los medios multimedia me apasionan. Soy una persona decidida e intuitiva al tomar decisiones, analizando cuidadosamente todas las opciones. En mi carrera, he desarrollado habilidades de comunicación efectiva y empatía, comprendiendo y respondiendo a las necesidades de los démas. Disfruto trabajar en equipo, siendo proactivo y generando soluciones creativas mediante la colaboracion y la diversidad de perspectivas.</p>
     </div>
-    <div class="h-[calc(100dvh-120px)]">
+    <div class="hidden h-[calc(100dvh-120px)] md:block">
       <picture>
         <img class="w-auto h-full mx-auto" src="https://firebasestorage.googleapis.com/v0/b/phillipe-matos.appspot.com/o/me-586x1080.webp?alt=media&token=12d470b9-22ae-4d49-a686-e873fc4cdefd" alt="phillipe matos comunicador audiovisual" width="586" height="1080">
       </picture>
@@ -125,7 +125,7 @@ import Ubication from '../icons/ubication.astro';
     <div class="h-[calc(100dvh-184px)] flex flex-col items-start justify-between">
       <div class="w-full flex items-center justify-between">
         <div class="flex flex-col items-start justify-between">
-          <h3 class="uppercase text-5xl font-black mb-6 ">experience</h3>
+          <h3 class="uppercase text-5xl font-black mb-6 ">experiencia</h3>
           <hr class="h-3 w-full bg-primary border-0">
         </div>
         <div>
@@ -135,8 +135,8 @@ import Ubication from '../icons/ubication.astro';
       <div class="w-full h-full pt-10 px-14 grid grid-cols-2 gap-x-60 items-start">
         <div class="h-full flex flex-col items-start justify-start gap-y-10">
           <Skills title="Guionista" desc="Informe especial por semana santa 2024" />
-          <Skills title="Camarógrafo" desc='Cortometraje "La calidez de un recuerdo" 2023' />
-          <Skills title="Camarógrafo" desc='Packshot "Ashil" 2023' />
+          <Skills title="Camarógrafo" desc='Cortometraje "La calídez de un recuerdo" 2023' />
+          <Skills title="Camarógrafo" desc='Packshot "Ashi" 2023' />
         </div>
         <div class="h-full flex flex-col items-start justify-start gap-y-10">
           <Skills title="Asistente de dirección" desc="Asistente de dirección Teatro Barranco 2.0 2023" />
@@ -289,20 +289,20 @@ import Ubication from '../icons/ubication.astro';
     </div>
   </SectionContainer>
   <SectionContainer id="contact" className="mb-0 pb-72">
-    <div class="w-full h-full flex flex-col items-center justify-between">
+    <div class="w-full h-full flex flex-col items-center justify-end">
       <div class="mx-auto flex flex-col items-center justify-center gap-y-1">
         <h6 class="uppercase text-4xl text-center font-black">contáctame</h6>
         <span class="space-mono text-center italic text-sm font-semibold text-primary">¡Trabajemos juntos!</span>
       </div>
       <div class="mx-auto flex items-center justify-between gap-x-20">
-        <div class="flex flex-col items-center justify-end gap-y-4">
+        <div class="flex flex-col items-center justify-end gap-y-4 min-w-52">
           <div class="h-24 flex flex-col items-center justify-start gap-y-1">
             <Phone width="64" height="64" />
             <span class="text-base font-semibold">Teléfono</span>
           </div>
           <a class="text-base font-light" href="tel:+51970183317">970 183 317</a>
         </div>
-        <div class="flex flex-col items-center justify-start gap-y-4">
+        <div class="flex flex-col items-center justify-start gap-y-4 min-w-52">
           <div class="h-24 flex flex-col items-center justify-end gap-y-1">
             <Mail width="64" height="64" />
             <span class="text-base font-semibold">Email</span>
@@ -312,7 +312,7 @@ import Ubication from '../icons/ubication.astro';
             <a class="text-base font-light" href="mailto:phillipematos1@gmail.com">phillipematos1@gmail.com</a>
           </div>
         </div>
-        <div class="flex flex-col items-center justify-start gap-y-4">
+        <div class="flex flex-col items-center justify-start gap-y-4 min-w-52">
           <div class="h-24 flex flex-col items-center justify-end gap-y-1">
             <Ubication width="64" height="64" />
             <span class="text-base font-semibold">Address</span>
@@ -347,7 +347,6 @@ import Ubication from '../icons/ubication.astro';
   const next = document.getElementById('next') as HTMLDivElement;
 
   if (slider && prev && next) {
-		let slides = Array.from(slider.children) as any;
 		let actualIndex = 0;
 
     prev.addEventListener('click', () => {
@@ -366,4 +365,8 @@ import Ubication from '../icons/ubication.astro';
 			slider.scrollLeft = slides[actualIndex].offsetLeft;
     });
   };
+
+  window.addEventListener('scroll', () => {
+    
+  });
 </script>
